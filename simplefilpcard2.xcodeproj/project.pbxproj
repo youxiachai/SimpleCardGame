@@ -22,6 +22,10 @@
 		F139AD951803017400664B89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F139AD741803017400664B89 /* UIKit.framework */; };
 		F139AD9D1803017400664B89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F139AD9B1803017400664B89 /* InfoPlist.strings */; };
 		F139AD9F1803017400664B89 /* simplefilpcard2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F139AD9E1803017400664B89 /* simplefilpcard2Tests.m */; };
+		F139ADB018030E6C00664B89 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = F139ADAF18030E6C00664B89 /* Deck.m */; };
+		F139ADB31803119400664B89 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = F139ADB21803119400664B89 /* Card.m */; };
+		F139ADB6180314A400664B89 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = F139ADB5180314A400664B89 /* PlayingCard.m */; };
+		F139ADB918031D3100664B89 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = F139ADB818031D3100664B89 /* PlayingCardDeck.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,14 @@
 		F139AD9A1803017400664B89 /* simplefilpcard2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "simplefilpcard2Tests-Info.plist"; sourceTree = "<group>"; };
 		F139AD9C1803017400664B89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F139AD9E1803017400664B89 /* simplefilpcard2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = simplefilpcard2Tests.m; sourceTree = "<group>"; };
+		F139ADAE18030E6C00664B89 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
+		F139ADAF18030E6C00664B89 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
+		F139ADB11803119400664B89 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		F139ADB21803119400664B89 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		F139ADB4180314A400664B89 /* PlayingCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCard.h; sourceTree = "<group>"; };
+		F139ADB5180314A400664B89 /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCard.m; sourceTree = "<group>"; };
+		F139ADB718031D3100664B89 /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCardDeck.h; sourceTree = "<group>"; };
+		F139ADB818031D3100664B89 /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCardDeck.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +126,7 @@
 		F139AD761803017400664B89 /* simplefilpcard2 */ = {
 			isa = PBXGroup;
 			children = (
-				F139AD7F1803017400664B89 /* AppDelegate.h */,
-				F139AD801803017400664B89 /* AppDelegate.m */,
+				F139ADAA18030B4F00664B89 /* Model */,
 				F139AD821803017400664B89 /* Main_iPhone.storyboard */,
 				F139AD851803017400664B89 /* Main_iPad.storyboard */,
 				F139AD881803017400664B89 /* ViewController.h */,
@@ -129,6 +140,8 @@
 		F139AD771803017400664B89 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F139AD7F1803017400664B89 /* AppDelegate.h */,
+				F139AD801803017400664B89 /* AppDelegate.m */,
 				F139AD781803017400664B89 /* simplefilpcard2-Info.plist */,
 				F139AD791803017400664B89 /* InfoPlist.strings */,
 				F139AD7C1803017400664B89 /* main.m */,
@@ -153,6 +166,21 @@
 				F139AD9B1803017400664B89 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F139ADAA18030B4F00664B89 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F139ADAE18030E6C00664B89 /* Deck.h */,
+				F139ADAF18030E6C00664B89 /* Deck.m */,
+				F139ADB11803119400664B89 /* Card.h */,
+				F139ADB21803119400664B89 /* Card.m */,
+				F139ADB4180314A400664B89 /* PlayingCard.h */,
+				F139ADB5180314A400664B89 /* PlayingCard.m */,
+				F139ADB718031D3100664B89 /* PlayingCardDeck.h */,
+				F139ADB818031D3100664B89 /* PlayingCardDeck.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,7 +281,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F139ADB6180314A400664B89 /* PlayingCard.m in Sources */,
+				F139ADB31803119400664B89 /* Card.m in Sources */,
+				F139ADB018030E6C00664B89 /* Deck.m in Sources */,
 				F139AD8A1803017400664B89 /* ViewController.m in Sources */,
+				F139ADB918031D3100664B89 /* PlayingCardDeck.m in Sources */,
 				F139AD811803017400664B89 /* AppDelegate.m in Sources */,
 				F139AD7D1803017400664B89 /* main.m in Sources */,
 			);
@@ -317,7 +349,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -357,7 +389,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -395,6 +427,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "simplefilpcard2/simplefilpcard2-Prefix.pch";
 				INFOPLIST_FILE = "simplefilpcard2/simplefilpcard2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -408,6 +441,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "simplefilpcard2/simplefilpcard2-Prefix.pch";
 				INFOPLIST_FILE = "simplefilpcard2/simplefilpcard2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

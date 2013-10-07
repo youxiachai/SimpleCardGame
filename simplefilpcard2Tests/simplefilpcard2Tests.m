@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <Foundation/Foundation.h>
 
 @interface simplefilpcard2Tests : XCTestCase
 
@@ -29,6 +30,7 @@
 - (void)testExample
 {
     XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+   // NSLog(@"Hello world");
 }
 
 @end

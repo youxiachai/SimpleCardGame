@@ -10,22 +10,24 @@
 #import "Deck.h"
 
 @interface ViewController ()
-
+@property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
+@property (nonatomic) int flipCount;
 @end
 
 @implementation ViewController
 
-- (IBAction)click:(UIButton *)sender {
-    Deck *testDeck = [[Deck alloc] init];
-    
-   BOOL isTest = [testDeck atTop:YES];
-    
-    if(isTest){
-        NSLog(@"true");
-    }else{
-        NSLog(@"false");
-    }
+- (void) setFlipCount:(int)flipCount {
+    // only setter or getter use _flipCount
+    _flipCount = flipCount;
+    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
+    NSLog(@"flip update %d", self.flipCount);
 }
+
+- (IBAction)flipCard:(UIButton *)sender {
+    sender.selected = !sender.isSelected;
+    self.flipCount++;
+}
+
 
 
 @end
